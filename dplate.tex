@@ -1,0 +1,59 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[left=3cm, right=3cm, top=3cm, bottom=11.7cm, showframe]{geometry}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{makecell}
+\usepackage[utf8]{inputenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\headline}{Star Trek}
+\newcommand{\logo}{logo.png}
+
+\newcommand{\firstname}{Geordi La Forge, Lt.Com}
+\newcommand{\firstlineone}{Chief engineer}
+\newcommand{\firstlinetwo}{USS Enterprise (NCC-1701-E)}
+\newcommand{\firstimage}{laforge.png}
+
+\newcommand{\secondname}{Deanna Troi, Com.}
+\newcommand{\secondlineone}{Counsellor}
+\newcommand{\secondlinetwo}{USS Enterprise (NCC-1701-E)}
+\newcommand{\secondimage}{troi.png}
+
+\newcommand{\operator}{Administration: Captain Jean-Luc Picard}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\normalrule}{\Xhline{2\arrayrulewidth}}
+\newcommand{\thickrule}{\Xhline{5\arrayrulewidth}}
+
+\setlength\parindent{0pt}
+
+\begin{document}
+{\fontfamily{cmss}\selectfont
+  \begin{center}
+    \ \\\vspace{.1cm}
+    \hspace{11cm}\includegraphics[width=0.15\textwidth]{\logo}
+    \ \\\vspace{.9cm}
+    \begin{tabularx}{14cm}{Xr}
+      \Huge \textbf{\headline} & \\
+      \thickrule \\
+      \Large \textbf{\firstname} & \multirow{3}{*}{
+      \includegraphics[width=0.15\textwidth]{\firstimage}
+      } \\ \\
+      \Large \firstlineone \\ \\
+      \Large \firstlinetwo & \\ \\
+      \thickrule \\
+      \Large \textbf{\secondname} & \multirow{3}{*}{
+      \includegraphics[width=0.15\textwidth]{\secondimage}
+      } \\ \\
+      \Large \secondlineone \\ \\
+      \Large \secondlinetwo & \\ \\
+      \thickrule \\ \\
+      \Large \operator
+    \end{tabularx}
+  \end{center}
+\thispagestyle{empty}
+}
+\end{document}
