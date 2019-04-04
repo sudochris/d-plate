@@ -3,4 +3,4 @@
 A minimalistic door plate template (150x150mm).
 
 ### Example:
-![](http://i.imgur.com/DjWDAEG.png)
+![](https://i.imgur.com/Z7psfJV.png)
