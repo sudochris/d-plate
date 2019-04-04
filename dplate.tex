@@ -5,6 +5,7 @@
 \usepackage{graphicx}
 \usepackage{makecell}
 \usepackage[utf8]{inputenc}
+\usepackage{sty/qrcode}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -14,12 +15,12 @@
 \newcommand{\firstname}{Geordi La Forge, Lt.Com}
 \newcommand{\firstlineone}{Chief engineer}
 \newcommand{\firstlinetwo}{USS Enterprise (NCC-1701-E)}
-\newcommand{\firstimage}{laforge.png}
+\newcommand{\firstqrcontent}{https://memory-alpha.fandom.com/de/wiki/Geordi_La_Forge}
 
 \newcommand{\secondname}{Deanna Troi, Com.}
 \newcommand{\secondlineone}{Counsellor}
 \newcommand{\secondlinetwo}{USS Enterprise (NCC-1701-E)}
-\newcommand{\secondimage}{troi.png}
+\newcommand{\secondqrcontent}{https://memory-alpha.fandom.com/de/wiki/Deanna_Troi}
 
 \newcommand{\operator}{Administration: Captain Jean-Luc Picard}
 
@@ -34,19 +35,19 @@
 {\fontfamily{cmss}\selectfont
   \begin{center}
     \ \\\vspace{.1cm}
-    \hspace{11cm}\includegraphics[width=0.15\textwidth]{\logo}
+    \hspace{11cm}\includegraphics[height=2.5cm]{\logo}
     \ \\\vspace{.9cm}
     \begin{tabularx}{14cm}{Xr}
       \Huge \textbf{\headline} & \\
       \thickrule \\
       \Large \textbf{$\leftarrow$\ \firstname} & \multirow{3}{*}{
-      \includegraphics[width=0.15\textwidth]{\firstimage}
+      \qrcode[height=2.5cm]{\firstqrcontent}
       } \\ \\
       \Large \firstlineone \\ \\
       \Large \firstlinetwo & \\ \\
       \thickrule \\
       \Large \textbf{$\rightarrow$\ \secondname} & \multirow{3}{*}{
-      \includegraphics[width=0.15\textwidth]{\secondimage}
+      \qrcode[height=2.5cm]{\secondqrcontent}
       } \\ \\
       \Large \secondlineone \\ \\
       \Large \secondlinetwo & \\ \\
