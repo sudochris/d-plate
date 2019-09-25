@@ -1,10 +1,23 @@
 \documentclass[12pt, a4paper]{article}
-\usepackage[left=3cm, right=3cm, top=3cm, bottom=11.7cm, showframe]{geometry}
+\usepackage[left=0cm, top=0cm, width=16.55cm,height=15.25cm]{geometry}
 \usepackage{tabularx}
 \usepackage{multirow}
 \usepackage{graphicx}
 \usepackage{makecell}
 \usepackage[utf8]{inputenc}
+\usepackage{everypage}
+\usepackage{tikzpagenodes}
+\usepackage{tikz}
+
+\AddEverypageHook{
+   \begin{tikzpicture}[remember picture, overlay, black]
+   \draw (current page text area.north east) node (A){};
+   \draw (current page text area.south east) node (B){};
+   \draw (current page text area.south west) node (C){};
+   \draw[dashed] (B.center) -- (A.center);
+   \draw[dashed] (C.center) -- (B.center);
+   \end{tikzpicture}
+}
 \usepackage{sty/qrcode}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
